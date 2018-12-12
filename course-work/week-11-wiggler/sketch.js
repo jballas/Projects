@@ -17,13 +17,12 @@ function draw(){
     let y = sin(angle ) * scalar;
     let x = offset;
 
-for (i = 0; i < width; i ++ ){
-    ellipse(x, y + 50 * i, 59, 50);
+    ellipse(x, y + 50, 59, 50);
     angle += speed;
     offset ++;
     offset %= width;
-}
-//    displayBody(x, y, 10);
+
+    displayBody(x, y, 50);
 
 
 }
