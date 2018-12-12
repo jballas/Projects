@@ -13,16 +13,12 @@ function setup(){
 function draw(){
     background(0);
 
-//  for( a = 0; a < 1.2; a += .4){
     let y = sin(angle ) * scalar;
     let x = offset;
 
-    ellipse(x, y + 50, 59, 50);
-    angle += speed;
-    offset ++;
-    offset %= width;
-
     displayBody(x, y, 50);
+
+    moveBody(x,y);
 
 
 }
@@ -43,7 +39,14 @@ function displayBody(x,y, size){
 
 }
 
+function moveBody(x,y){
 
+  ellipse(x, y + 50, 59, 50);
+  angle += speed;
+  offset ++;
+  offset %= width;
+
+}
 
 /*
 class Wiggler {
