@@ -13,7 +13,7 @@ function setup(){
 function draw(){
     background(0);
 
-    let y = sin(angle ) * scalar;
+    let y = sin(angle ) * scstalar;
     let x = offset;
 
     displayBody(x, y, 50);
