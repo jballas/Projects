@@ -1,26 +1,36 @@
+pathWidth = 20;
+
+width = 600;
+height = 600;
+
+posX = width/2;
+posY = width/2;
 
 function setup() {
-  createCanvas( 500, 500);
+  createCanvas( 600, 600);
 }
 
 function draw() {
   background(200);
-  posX = width/2;
-  posY = width/2;
 
-  //print(mouseX, mouseY);
+  print(posY);
 
   // path //
   strokeWeight(5);
   stroke(0);
-  line(width/2-20, 0, width/2-20, height);
-  line(width/2+20, 0, width/2+20, height);
+  line(width/2 - pathWidth, 0, width/2 - pathWidth, height);
+  line(width/2 + pathWidth, 0, width/2 + pathWidth, height);
 
   // player //
   push();
   noStroke();
     playerDisplay(posX,posY);
   pop();
+
+  if ( mouseIsPressed) {
+    posY += 5;
+  }
+
 }
 
 function playerDisplay(x,y){
@@ -31,11 +41,10 @@ function playerDisplay(x,y){
 
 }
 
-function keyPressed(){
+/*function keyPressed(){
 
     if (keyCode === UP_ARROW){
-      xPos += 1
+      posY =+ 1
     }
     return false;
-
-}
+}*/
