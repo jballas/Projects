@@ -14,7 +14,7 @@ function draw() {
   background(0);
   fill(255);
 
-frameRate(15);
+//frameRate(15);
 
   displayEye(x, y, width, height);
   displayEye(150, 150, width, height);
