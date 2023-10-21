@@ -1,0 +1,16 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+margin: 50px;
+color: #333;
+background-color: #3eaca7;
+}
+
+canvas {
+  float: right;
+}
+
+header{
+  position:absolute;
+  right:10px;
+  text-align: right;
+}

@@ -20,8 +20,12 @@ function draw(){
         line (x_one, y_one, x_two, y_two);
 
        //x_one ++;
-       //y_one ;
+       //y_one -- ;
+       if (y_one >= width || x_one >= width){
+         y_one = width;
+         x_one = height;
+       }
     }
-    
-    
+
+
 }

@@ -17,12 +17,12 @@ class Caterpillar {
         this.bounce();
         this.touching(objArr, myIdx);
     }
-    
+
     // Display the circles
     display() {
 
         push();
-            
+
             for( let i = 0; i <= 350; i +=50 ){
                 noFill();
                 stroke(255);
@@ -60,8 +60,8 @@ class Caterpillar {
 
     // New goal. Make things interact, somehow.
 
-    // If the circles are touching, they grow to a certain size. 
-    // Code adapted from Dr. Musick's 'Bouncing Happy Face' 
+    // If the circles are touching, they grow to a certain size.
+    // Code adapted from Dr. Musick's 'Bouncing Happy Face'
     // montana-media-arts.github.io/creative-coding-1/modules/week-12/more-examples/
     touching(objArr, myIdx) {
         for (var i = 0; i < objArr.length; i++) {
@@ -75,9 +75,9 @@ class Caterpillar {
                     if (this.size > height || this.size > width){
                         this.size = 10;
                     }
-                    
+
                 }
-                    
+
             }
         }
     }

@@ -9,11 +9,12 @@ function setup() {
     var centerX = 25;
     var centerY = 100;
 
-    var d_circle = 50;    
+    var d_circle = 50;
     let movement = 3;
 
 function draw() {
 
+/*
     // set up triangle variables
 
     var rightX = 50;
@@ -21,41 +22,43 @@ function draw() {
     var leftX = 5;
     var leftY = 200;
 
-    // colors variables? Unfortunately I can't make the RGB red value a variable. I can only make the whole thing a color variable. 
-    var red_Value = color(255, 0, 0);
+    // colors variables? Yes, you can make the red a variable, it can even be random number.
+
+    let r = 200;
+    var red_Value = color(r, 0, 0);
 
     frameRate(10);
-    //noStroke();
+    noStroke();
 
-    //let t = width * .1;
-    
+    let t = width * .1;
+
 
     let s = .5;
 
-  
+
 // EXPERIMENT with _for loops_. HOW DO I MAKE THIS ENTIRE CODE REPEAT?
 
     //draw first triangle
 push();
     scale(s);
-    
+
 for (let x = 5; x <= width; x +=150 ) {
     for( let y = 5; y < height *.75; y +=100) {
-     
+
             //translate(t,t);
             fill( red_Value );
-            //rotate( movement);
+            rotate( movement);
             triangle( x, y, x + 50, y + 100, x - 90, y + 100 );
-        
-    
+
+
     }
 }
 
 pop();
 
-//movement = mouseX - width * 2;
+movement = mouseX - width * 2;
 
-//movement % 3;
+movement % 3;
 
 
 
@@ -66,8 +69,8 @@ pop();
 for(let hill_x = 20; hill_x < width; hill_x += 20) {
     for (let hill_y = height * .6; hill_y < height - 100; hill_y += 60 ) {
     fill('#4d2f20');
-    ellipse( hill_x, hill_y, random(ceil(50)), 200 );    
-}   
+    ellipse( hill_x, hill_y, random(ceil(50)), 200 );
+}
     }
 
 
@@ -83,9 +86,9 @@ for(let hill_x = 20; hill_x < width; hill_x += 20) {
     }
 
     pop();
+*/
 
-
-/* EXPERIMENT with if statements, a pear shape into a circle shapes until it grows so big it  set to a simple variable. 
+// EXPERIMENT with if statements, a pear shape into a circle shapes until it grows so big it  set to a simple variable.
     ellipse(centerX, centerY, d_circle );
 
     centerX ++;
@@ -103,7 +106,7 @@ for(let hill_x = 20; hill_x < width; hill_x += 20) {
      //else ( d_circle < 25) {
     //    d_circle = d_circle ++;
     //}
-*/
+
 
 
 
@@ -115,9 +118,9 @@ for(let hill_x = 20; hill_x < width; hill_x += 20) {
             rotate (mouseY);
             triangle( centerX, centerY, rightX, rightY, leftX, leftY );
         pop();
-        
+
     // second triangle
-        
+
     push();
         fill( 'rgba( 120, 20, 255, .40)' );
         translate ( 400, 400 );

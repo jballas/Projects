@@ -2,13 +2,13 @@
 // This is an experiment in flapping wings
 
 let swarm = [];
-let how_many_bugs = 15;
+let how_many = 15;
 
 function setup() {
 
     createCanvas(windowWidth, 600);
-    
-    for ( let i = 0; i < how_many_bugs; i ++) {
+
+    for ( let i = 0; i < how_many; i ++) {
         swarm.push( new Butterfly() );
     }
 }
@@ -21,10 +21,10 @@ function draw() {
     for ( let i = 0; i < swarm.length; i ++){
         swarm[i].frame();
     }
-    
+
 }
 
-// Butterfly 
+// Butterfly
 
 class Butterfly {
 
@@ -55,11 +55,11 @@ class Butterfly {
     //Display butterfly
     display() {
         push()
-        
+
         translate(this.move_x, this.move_y);
-        
+
         // Right wing
-    
+
         triangle(this.top_x, this.top_y, this.wingTip_x, this.wingTip_y, this.bottom_x, this.bottom_y);
 
         // Left wing
@@ -69,26 +69,26 @@ class Butterfly {
             stroke(255);
             noFill();
             triangle(this.top_x, this.top_y, this.wingTip_x, this.wingTip_y, this.bottom_x, this.bottom_y);
-        
+
         pop();
-        
+
         // Body
-        
+
         ellipse( this.top_x - 5 , this.top_y + 20, 10, this.diameter);
 
         pop();
     }
 
-    
+
     //Move wings, flapping
     move() {
-   
+
         //Movement across the screen
         this.move_x += this.delta_x;
         this.move_y += this.delta_y;
 
 
-        // Wing's flapping       
+        // Wing's flapping
         this.wingTip_x -= this.flap;
         if (this.wingTip_x == 0){
             this.wingTip_x = 50;
@@ -97,7 +97,7 @@ class Butterfly {
         console.log( this.move_x);
 
     }
-    
+
 
     edgeCheck(){
 
@@ -107,10 +107,9 @@ class Butterfly {
         if(this.move_y >= height || this.move_y <= -100 ) {
             this.delta_y *= -1;
         }
-        
+
     }
 
 
-    
-}
 
+}

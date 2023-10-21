@@ -33,7 +33,7 @@ function draw() {
 // player movement //
 
   if ( mouseIsPressed) {
-    posY += 5;
+    posY += 50;
   }
 
   if (posY > height){

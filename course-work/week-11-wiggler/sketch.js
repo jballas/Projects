@@ -13,7 +13,7 @@ function setup(){
 function draw(){
     background(0);
 
-    let y = sin(angle ) * scstalar;
+    let y = sin(angle ) * scalar;
     let x = offset;
 
     displayBody(x, y, 50);
@@ -48,7 +48,7 @@ function moveBody(x,y){
 
 }
 
-/*
+
 class Wiggler {
 
     constructor(){
@@ -94,4 +94,3 @@ class Wiggler {
     }
 
 }
-*/
